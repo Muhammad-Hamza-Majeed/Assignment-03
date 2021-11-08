@@ -1,0 +1,96 @@
+<html>
+<head>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script type = "text/javascript">
+
+
+function EqualOrNot()
+{
+  if (document.getElementById("text1").value == document.getElementById("text2").value)
+  {
+    $(document).ready(function(){
+      $("div.square").css('background-color', 'green').animate({'margin-left': '50%', 'height':'150px', 'width' : '150px'}, 5000).animate({'margin':'0', 'height':'100px', 'width':'100px'}, 5000);
+
+    })
+
+  }
+  else
+  {
+    $(document).ready(function(){
+      $("div.square").css('background-color', 'red').animate({'margin-left': '50%', 'height':'150px', 'width' : '150px'}, 5000).animate({'margin':'0', 'height':'100px', 'width':'100px'}, 5000);
+    })
+  }
+  
+  
+}
+
+</script>   
+
+
+<style type="text/css">
+
+    body{
+      background: #BA5370;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F4E2D8, #BA5370);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F4E2D8, #BA5370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ 
+
+    }
+    div.panel input
+    {
+        background-color: aqua;
+    }
+    
+    div.panel
+    {
+        margin: 0px;
+        padding : 5px;
+        text-align: center;
+    }
+    
+    p.extra
+    {
+      margin: 0px;
+      padding : 5px;
+      text-align: center;
+    }
+div.square{
+  height: 100px;
+  width : 100px;
+  
+  background-color: blue;
+}
+div.panel
+{
+  height: 150px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+  
+
+  <div class="panel">
+    <br>
+    <input id="text1" type="text" placeholder="Enter Text">
+    <input id="text2" type="text" placeholder="Enter Text">
+  
+  </div>
+<p class="extra"><input type="button" value = "Animate" onclick="EqualOrNot()"></p>
+<div class ="square">
+  .
+
+</div>
+
+  </body>
+  </html>
+  
